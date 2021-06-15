@@ -3,7 +3,7 @@ layout: post
 title: "Co-Localization for Planetary Rover Teams"
 subtitle: "Astrobotic Technology"
 category: Web & Apps
-src: "assets/2021-05-10-rover-teams/astrobotic_logo.jpeg"
+src: "assets/2021-05-10-rover-teams/astrobotic_logo.jpg"
 ---
 ![ORB Features](/assets/2021-05-10-rover-teams/feature_matching_crop.png)
 <p>
