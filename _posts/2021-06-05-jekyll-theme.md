@@ -3,7 +3,7 @@ layout: post
 title: "Mono-lite Jekyll Theme"
 subtitle: "Ruby Gem"
 category: Web & Apps
-src: "assets/2021-06-05-jekyll-theme/mono_lite_theme.png"
+src: "assets/2021-06-05-jekyll-theme/jekyll-test-tube.svg"
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
