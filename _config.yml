@@ -21,7 +21,7 @@
 title: Dylan Hawley
 email: dylanthomashawley@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Hi, my name is Dylan Hawley, and I'm a Computer Scientist at the University of Florida. I've worked on a wide range of projects, often touching robotics or computer vision in some way. My expected graduation date is May, 2022. I made this Jekyll theme myself!
+  Hi, my name is Dylan Hawley, I'm a Software Engineer at L3Harris. I've worked on a wide range of projects, often touching robotics, computer vision, or artificial intelligence. I'm passionate about solving new problems and exploring new technologies along the way!
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://dhawley.com" # the base hostname & protocol for your site, e.g. http://example.com
 remote_theme: dylanhawley/mono-lite
@@ -32,7 +32,7 @@ plugins:
 
 mono-lite:
   intro_description: >-
-    Hi, my name is Dylan Hawley, and I'm a Computer Scientist at the University of Florida. I've worked on a wide range of projects, often touching robotics or computer vision in some way. My expected graduation date is May, 2022. I made this Jekyll theme myself!
+    Hi, my name is Dylan Hawley, I'm a Software Engineer at L3Harris. I've worked on a wide range of projects, often touching robotics, computer vision, or artificial intelligence. I'm passionate about solving new problems and exploring new technologies along the way!
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
