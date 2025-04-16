@@ -1,34 +1,38 @@
-source "https://rubygems.org"
-# Hello! This is where you manage which Jekyll version is used to run.
-# When you want to use a different version, change it below, save the
-# file and run `bundle install`. Run Jekyll with `bundle exec`, like so:
-#
-#     bundle exec jekyll serve
-#
-# This will help ensure the proper Jekyll version is running.
-# Happy Jekylling!
-# gem "jekyll", "~> 4.2.0"
-gem "github-pages", "~> 214", group: :jekyll_plugins
-# This is the default theme for new Jekyll sites. You may change this to anything you like.
-gem "mono-lite", "~> 0.1.7"
-# If you want to use GitHub Pages, remove the "gem "jekyll"" above and
-# uncomment the line below. To upgrade, run `bundle update github-pages`.
-# gem "github-pages", group: :jekyll_plugins
-# If you have any plugins, put them here!
+source 'https://rubygems.org'
+
+gem 'jekyll'
+
+# Core plugins that directly affect site building
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.12"
-  gem "jekyll-remote-theme"
+    gem 'jekyll-archives-v2'
+    gem 'jekyll-email-protect'
+    gem 'jekyll-feed'
+    gem 'jekyll-get-json'
+    gem 'jekyll-imagemagick'
+    gem 'jekyll-jupyter-notebook'
+    gem 'jekyll-link-attributes'
+    gem 'jekyll-minifier'
+    gem 'jekyll-paginate-v2'
+    gem 'jekyll-regex-replace'
+    gem 'jekyll-scholar'
+    gem 'jekyll-sitemap'
+    gem 'jekyll-tabs'
+    gem 'jekyll-terser', :git => "https://github.com/RobertoJBeltran/jekyll-terser.git"
+    gem 'jekyll-toc'
+    gem 'jekyll-twitter-plugin'
+    gem 'jemoji'
+
+    gem 'classifier-reborn'  # used for content categorization during the build
 end
 
-# Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
-# and associated library.
-platforms :mingw, :x64_mingw, :mswin, :jruby do
-  gem "tzinfo", "~> 1.2"
-  gem "tzinfo-data"
+# Gems for development or external data fetching (outside :jekyll_plugins)
+group :other_plugins do
+    gem 'css_parser'
+    gem 'feedjira'
+    gem 'httparty'
+    gem 'observer'       # used by jekyll-scholar
+    gem 'ostruct'        # used by jekyll-twitter-plugin
+    # gem 'terser'         # used by jekyll-terser
+    # gem 'unicode_utils' -- should be already installed by jekyll
+    # gem 'webrick' -- should be already installed by jekyll
 end
-
-# Performance-booster for watching directories on Windows
-gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
-
-
-gem "webrick", "~> 1.7"
