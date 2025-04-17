@@ -3,9 +3,9 @@ layout: post
 title: "Co-Localization for Planetary Rover Teams"
 subtitle: "Astrobotic Technology"
 category: Web & Apps
-src: "assets/2021-05-10-rover-teams/astrobotic_logo.jpg"
+src: "assets/2021-05-10-rover-teams/astrobotic_logo.webp"
 ---
-![ORB Features](/assets/2021-05-10-rover-teams/feature_matching_crop.png)
+![ORB Features](/assets/2021-05-10-rover-teams/feature_matching_crop.webp)
 <p>
 Cooperative robots can explore the surface of planets with higher efficiency and lower mission risk, perform novel and precise resource and science surveys, and gather and share resources and information with other assets to bring planetary exploration. In order to work together more efficiently and effectively, robots must understand their location relative to their peers, which is challenged in planetary exploration by the fact that these environments lack global positioning systems to enable a robot to understand its absolute location in space.
 

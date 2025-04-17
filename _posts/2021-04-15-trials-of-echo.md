@@ -3,7 +3,7 @@ layout: post
 title: "Trials of Echo"
 subtitle: "Unity SteamVR 3D Audio Game"
 category: Web & Apps
-src: "assets/2021-04-15-trials-of-echo/trials_of_echo_cover.png"
+src: "assets/2021-04-15-trials-of-echo/trials_of_echo_cover.webp"
 ---
 <div style="position:relative;padding-bottom:56.25%;padding-top:30px;height:0;overflow:hidden">
   <iframe style="position:absolute;top:0;left:0;width:100%;height:100%" src="https://www.youtube.com/embed/pGUYqXQAB_0" frameborder="0"></iframe>
