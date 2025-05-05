@@ -5,52 +5,79 @@ subtitle: "Live Launch Tracker"
 category: Web & Apps
 src: "assets/2025-01-04-rocketry-app/icon.webp"
 ---
-Today, I'm excited to introduce [**Rocketry**](https://rocketry.app), an iOS application built to bring the latest spaceflight news directly to your fingertips, via SwiftUI and WidgetKit.
 
-## The Problem: Information Overload
+[rocketry]: https://rocketry.app/
+[appstore]: https://apps.apple.com/us/app/rocketry-live-launch-tracker/id6738462173
 
-Keeping up with upcoming rocket launches can be exciting, but often requires digging through websites or opening dedicated apps just to find the time. Furthermore, if you're planning to watch a launch in person, knowing the weather forecast is crucial, but that information is often separate. We wanted a simpler, more glanceable way to stay informed not just about *when* the next big launch is, but also the *conditions* for viewing it.
+Today, I'm excited to introduce [**Rocketry**](rocketry), an iOS application built to plan an optimal in-person viewing experience of the latest spaceflight launches.
 
-## Our Solution: Widgets Everywhere!
+![Composite Screenshot Group Preview of Rocketry](https://raw.githubusercontent.com/dylanhawley/RocketryWebsite/refs/heads/main/public/Rocketry-Screenshot-Group-All.webp)
+*<p align="center">Composite screenshot preview of Rocketry, from its [App Store page][appstore].</p>*
 
-Leveraging the power of Apple's `WidgetKit` and `SwiftUI` frameworks, Rocketry delivers key launch information, including weather forecasts, through beautifully designed widgets. Whether you prefer checking your lockscreen or adding a widget to your home screen, Rocketry has you covered. No need to unlock your phone or launch an app – the essential details are right there.
+<div align="center">
+<a href="https://apps.apple.com/us/app/rocketry-live-launch-tracker/id6738462173">
+  <img
+    src="https://rocketry.app/Download_on_the_App_Store_Badge_US-UK_RGB_wht_092917.svg"
+    alt="Download on App Store"
+    width="200"
+    height="60"
+  />
+</a>
+</div>
 
-<p align="center">
-  <table cellspacing="0" cellpadding="0" style="border-spacing: 0; border: none;">
-    <tr style="border: none;">
-      <td style="border: none;"><img src="https://github.com/dylanhawley/RocketryWebsite/blob/main/public/English%20%5Ben%5D%20%7C%20iPhone%20-%206.9%22%20Display%20-%201.jpeg?raw=true" width="150" style="display: block;"></td>
-      <td style="border: none;"><img src="https://github.com/dylanhawley/RocketryWebsite/blob/main/public/English%20%5Ben%5D%20%7C%20iPhone%20-%206.9%22%20Display%20-%202.jpeg?raw=true" width="150" style="display: block;"></td>
-      <td style="border: none;"><img src="https://github.com/dylanhawley/RocketryWebsite/blob/main/public/English%20%5Ben%5D%20%7C%20iPhone%20-%206.9%22%20Display%20-%203.jpeg?raw=true" width="150" style="display: block;"></td>
-      <td style="border: none;"><img src="https://github.com/dylanhawley/RocketryWebsite/blob/main/public/English%20%5Ben%5D%20%7C%20iPhone%20-%206.9%22%20Display%20-%204.jpeg?raw=true" width="150" style="display: block;"></td>
-      <td style="border: none;"><img src="https://github.com/dylanhawley/RocketryWebsite/blob/main/public/English%20%5Ben%5D%20%7C%20iPhone%20-%206.9%22%20Display%20-%205.jpeg?raw=true" width="150" style="display: block;"></td>
-    </tr>
-  </table>
-</p>
+## The Idea
 
+Surprisingly, none of the existing spaceflight news apps prioritize informing users about viewing conditions for rocket launches. As a former Space Coast resident and hobbyist launch photographer, I found myself overwhelmed by the sheer number of launches happening these days. It became clear that having reliable viewing condition forecasts would help me decide when it’s actually worth making the trip—ensuring the best chance for a memorable experience and a stunning photo.
 
-## How it Works
+## Building the Product
 
-Rocketry fetches up-to-date launch schedules and details from the fantastic [**Launch Library 2 API**](https://ll.thespacedevs.com/docs/). We parse this data and present it cleanly within the widgets. Weather forecasts are sourced directly from Apple Weather, ensuring you have the latest conditions.
+### Data Sources
 
-## Tech Stack
+[ll2]: https://thespacedevs.com/llapi/
+[tsd]: https://thespacedevs.com/supportus/
+[wk]: https://developer.apple.com/weatherkit/
+[wk-src]: https://developer.apple.com/weatherkit/data-source-attribution/
+[sln]: https://spacelaunchnow.me/
+[solar]: https://github.com/ceeK/Solar/tree/master/
+[ceek]: https://github.com/ceeK
 
-*   **SwiftUI:** For building the user interface on iOS.
-*   **WidgetKit:** The core framework enabling the widget functionality.
-*   **Launch Library 2 API:** Our primary data source for spaceflight events.
+|Data Type|Tool|Creator|
+|----|-----|-----|
+|Upcoming Launches|[Launch Library 2][ll2]|[The Space Devs][tsd]|
+|Weather Forecast|[WeatherKit][wk]|[Apple Weather][wk-src]|
+|Sunrise / Sunset|[Solar][solar]|[Chris Howell (ceeK)][ceek]
 
-## Getting Started
+[Launch Library 2][ll2] is a database that powers big projects such as [Space Launch Now][sln]. The API is accessible to everyone for free. I choose to support them on Patreon to help make their data collection possible, as well as increase my rate limit from **15 calls per hour** to **500 calls per hour**. This can be independently verified on [The Space Devs][tsd] website, where my name is listed under Premium Supporters.
 
-Rocketry is designed for iPhone users. You can find the project source code [here on GitHub](https://github.com/dylanhawley/Rocketry).
+[Solar][solar] is a Swift micro library for generating Sunrise and Sunset times. It performs its calculations locally using an algorithm from the [United States Naval Observatory](http://edwilliams.org/sunrise_sunset_algorithm.htm), and thus does not require the use of a network.
 
-## Acknowledgements
+### Weather at a Glance
 
-A big thank you to the providers of the resources that made Rocketry possible:
-*   The [**Launch Library 2**](https://ll.thespacedevs.com/docs/) team for their comprehensive API.
-*   The Noun Project for the royalty-free [**Rocket Vector Art**](https://thenounproject.com/icon/rocket-680024/).
-*   Apple Weather for providing weather forecast data.
+[hws]: https://www.hackingwithswift.com/plus/remaking-weather
 
-## Conclusion
+Making the UI beautiful while also information dense was a priority for me. I learned how to create beautiful and fast animations natively in SwiftUI by following [Remaking Weather by Hacking with Swift][hws]. Here's a peek into how just one component of the animated weather backgrounds in [Rocketry][rocketry] work:
 
-Rocketry aims to make following space exploration easier and more integrated into your daily routine. We hope you enjoy having the latest launch news readily available on your devices!
+1. Fetch the upcoming `Launch` model from the on-device SwiftData cache.
+2. Calculate Sunrise / Sunset times using the `time` and `location` of the upcoming launch.
+3. Map the Solar event times to gradient stops in a `LinearGradient` representing the colors of the sky based on time of day and location.
+4. Interpolate the launch time within the `LinearGradient` and construct a `View` displaying only the nearest gradient stops.
+
+Part of the elegance in this component is rendering most of the weather component without actually needing to fetch weather data. The sky gradient is calculated entirely on-device, making these load instantly. 
+
+Visual components that *require* fetching weather data, such as clouds, can just fade in a few milliseconds after the view is rendered and the user will not notice or care about the delay caused by a network call.
+
+### Widgets
+
+Making a near real time widget on iOS is nearly imposssible. `WidgetKit`, the framework used to construct iOS Widgets, severely limits the number of updates that can be scheduled on the widget's `Timeline`. This means if a launch is delayed, the Rocketry widget will not update the NET until your iPhone feels like its time to fetch new data. This is simply an unfortunate limitation we have to deal with as our hands are tied.
+
+> The Clock widget that comes natively with iOS has an animated second hand that moves in real time. After some research, I learned this is an impossibility to recreate and ship on the App Store. Apple simply gave themselves permission to update native widgets at whatever frequency they determine to be best, while handicapping other developers.
+
+### Code Repository
+
+You can find the project source code [here on GitHub](https://github.com/dylanhawley/Rocketry).
+
+## Feedback
+
+Rocketry aims to make viewing rocket launches a more pleasurable and predictable experience. If you'd like to make a feature suggestion or just reach out, my email is [dylanthomashawley@gmail.com](mailto:dylanthomashawley@gmail.com).
 
 Happy coding (and launch watching)! 
