@@ -12,7 +12,7 @@ src: "assets/2025-01-04-rocketry-app/icon.webp"
 Today, I'm excited to introduce [**Rocketry**](rocketry), an iOS application built to plan an optimal in-person viewing experience of the latest spaceflight launches.
 
 ![Composite Screenshot Group Preview of Rocketry](https://raw.githubusercontent.com/dylanhawley/RocketryWebsite/refs/heads/main/public/Rocketry-Screenshot-Group-All.webp)
-*<p align="center">Composite screenshot preview of Rocketry, from its [App Store page][appstore].</p>*
+<p align="center"><i>Composite screenshot preview of Rocketry, from its App Store page</i></p>
 
 <div align="center">
 <a href="https://apps.apple.com/us/app/rocketry-live-launch-tracker/id6738462173">
