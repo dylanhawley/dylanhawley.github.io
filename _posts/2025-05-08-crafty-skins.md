@@ -6,22 +6,32 @@ category: Web & Apps
 src: "assets/2025-05-08-crafty-skins/thumbnail.webp"
 ---
 
-WIP
+> Note: This page is a work in progress.
 
-# IP Adapter Scale Test
+<!-- toc -->
+ - [Experiments](#experiments)
+   - [SDXL IP Adapter Scale Experiment (100 steps)](#sdxl-ip-adapter-scale-experiment-100-steps)
 
-## Experiment Details
+# Experiments
 
-- **Start Time**: 2025-05-09 02:43:53.406388
-- **End Time**: 2025-05-09 03:20:09.170205
-- **Duration**: 0:36:15.763817
+## SDXL IP Adapter Scale Experiment (100 steps)
 
-## Models Used
+### Models Used
 
-- **SDXL Model**: monadical-labs/minecraft-skin-generator-sdxl
-- **IP-Adapter Model**: h94/IP-Adapter
+- **SDXL Model**: [monadical-labs/minecraft-skin-generator-sdxl](https://huggingface.co/monadical-labs/minecraft-skin-generator-sdxl)
+- **IP-Adapter**: [h94/IP-Adapter/sdxl_models/ip-adapter_sdxl.bin](https://huggingface.co/h94/IP-Adapter/tree/main/sdxl_models)
 
-## Input Images
+### Parameters
+
+- **IP Scales Tested**: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
+- **Prompt**: ""
+- **Number of Inference Steps**: 100
+
+### Results
+
+![Composite Figure]({{ site.baseurl }}/assets/2025-05-08-crafty-skins/ip_adapter_scale_comparison.webp)
+
+### Evaluation Image Names
 
 - data/raw/input/13thdoctor.png
 - data/raw/input/3dglasses.png
@@ -39,13 +49,3 @@ WIP
 - data/raw/input/donaldsuit.png
 - data/raw/input/doratheexplorer.png
 - data/raw/input/frontman.png
-
-## Parameters
-
-- **Scales Tested**: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
-- **Prompt**: 
-- **Number of Inference Steps**: 100
-
-## Results
-
-![Composite Figure]({{ site.baseurl }}/assets/2025-05-08-crafty-skins/ip_adapter_scale_comparison.webp)
