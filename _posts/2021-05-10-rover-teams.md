@@ -6,7 +6,7 @@ category: Web & Apps
 src: "assets/2021-05-10-rover-teams/astrobotic_logo.webp"
 ---
 <figure style="display: block; margin-left: auto; margin-right: auto; max-width: 500px;">
-  <img src="/assets/2021-05-10-rover-teams/feature_matching_crop.webp" alt="ORB Features" style="width: 100%;">
+  <img src="{{ site.baseurl }}/assets/2021-05-10-rover-teams/feature_matching_crop.webp" alt="ORB Features" style="width: 100%;">
   <figcaption style="text-align: center; font-style: italic;">Image features detected with ORB on Astrobotic's Peregrine Lander</figcaption>
 </figure>
 

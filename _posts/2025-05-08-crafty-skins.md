@@ -48,4 +48,4 @@ WIP
 
 ## Results
 
-![Composite Figure](assets/2025-05-08-crafty-skins/ip_adapter_scale_comparison.webp)
+![Composite Figure]({{ site.baseurl }}/assets/2025-05-08-crafty-skins/ip_adapter_scale_comparison.webp)
