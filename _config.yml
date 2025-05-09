@@ -30,6 +30,8 @@ plugins:
   - jekyll-feed
   - jekyll-remote-theme
 
+permalink: /:title/
+
 mono-lite:
   intro_description: >-
     I'm an AI Engineer / Creative Technologist / Space Enthusiast, currently building computer vision tools at Booz Allen in Washington, DC. My work often explores ways to make machine learning more intuitive, useful, or just plain cooler.
