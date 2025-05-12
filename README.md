@@ -7,7 +7,15 @@ $ bundle install
 $ bundle exec jekyll serve
 ```
 
-## Increase [PageSpeed](https://pagespeed.web.dev) Performance by converting images to WebP
+## Increase [PageSpeed](https://pagespeed.web.dev) Performance
+
+### Reduce image size
+
+```sh
+sips -Z <maxSize> <input_file>
+```
+
+### Convert images to WebP
 
 How to convert PNG to WebP on Mac:
 
@@ -28,5 +36,5 @@ Replace input.png with the actual name of your PNG file and output.webp with the
 By default, cwebp applies lossy compression. You can adjust the quality of the WebP file by adding the -q option (range 0-100, where 100 is the best quality):
 
 ```sh
-cwebp -q 50 input.png -o output.webp
+cwebp -q 30 input.png -o output.webp
 ```
